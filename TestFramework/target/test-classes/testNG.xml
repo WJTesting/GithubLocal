@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--<suite name="单元测试">  &lt;!&ndash; 可定义测试套件名称 &ndash;&gt;-->
+<!--    <test name="TestNG">-->
+
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="Tomandy"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes >-->
+<!--            <class name="Test.TestNGHelloWorld"/>-->
+<!--        </classes >-->
+<!--    </test> &lt;!&ndash; TestNG &ndash;&gt;-->
+<!--</suite> &lt;!&ndash; Default Suite &ndash;&gt;-->
+
+
+<suite name="Suite">
+    <listeners>
+        <listener class-name="Test.ExtentTestNGIReporterListener"></listener>
+    </listeners>
+    <test name="Test1">
+        <classes>
+            <!-- Class需要拆开 不然没法写 methods-->
+            <class name="Test.TestNGHelloWorld1">
+                <methods>
+                    <include name="testCase1"></include>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Test2">
+        <classes>
+            <!-- Class需要拆开 不然没法写 methods-->
+            <class name="Test.TestNGHelloWorld1">
+                <methods>
+                    <include name="testCase2"></include>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Test3">
+        <classes>
+            <!-- Class需要拆开 不然没法写 methods-->
+            <class name="Test.TestNGHelloWorld1">
+                <methods>
+                    <include name="testCase3"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
